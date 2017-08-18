@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/@skbkontur/react-ui/.*
+
+[include]
+
+[libs]
+
+[lints]
+all=warn
+sketchy-null-bool=off
+
+[options]
+unsafe.enable_getters_and_setters=true
+munge_underscores=true
+esproposal.decorators=true

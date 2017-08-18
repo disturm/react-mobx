@@ -1,16 +1,37 @@
 {
-  "name": "vacancy",
+  "name": "jobs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@skbkontur/react-ui": "^0.8.11",
+    "classnames": "^2.2.5",
     "custom-react-scripts": "0.1.4",
+    "mobx": "^3.2.2",
+    "mobx-react": "^4.2.2",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.52.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.3",
+    "prettier": "^1.5.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "precommit": "flow && lint-staged"
   }
 }
